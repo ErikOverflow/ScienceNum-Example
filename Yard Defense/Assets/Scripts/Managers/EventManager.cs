@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using YardDefense.Mob;
 
 #pragma warning disable 649
 namespace YardDefense
@@ -45,6 +46,12 @@ namespace YardDefense
         public void MobHealthChanged()
         {
             OnMobHealthChanged?.Invoke();
+        }
+
+        public event Action<MobInfo> OnMobDied;
+        public void MobDied(MobInfo mobInfo)
+        {
+            OnMobDied?.Invoke(mobInfo);
         }
 
     }

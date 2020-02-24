@@ -444,6 +444,8 @@ GameObject:
   - component: {fileID: 545168426}
   - component: {fileID: 545168428}
   - component: {fileID: 545168427}
+  - component: {fileID: 545168429}
+  - component: {fileID: 545168430}
   m_Layer: 0
   m_Name: Mob
   m_TagString: Untagged
@@ -527,7 +529,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30ab22341e7c20d41a25e471cf7957c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  urrentHealth: 10
+  mobName: Mob
+  currentHealth: 10
   maxHealth: 10
   attackDamage: 1
   attackFrequency: 1
@@ -557,6 +560,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mobInfo: {fileID: 545168426}
+--- !u!114 &545168429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545168423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d0654724d5fea42a3a35a03c17dae0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mobInfo: {fileID: 545168426}
+--- !u!114 &545168430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545168423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14dc5811ca1c94746aba3c835ef7e388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mobInfo: {fileID: 545168426}
+  spriteRenderer: {fileID: 545168425}
+  _mobSO: {fileID: 11400000, guid: 17ae7949dafeda1489e8bc46081dd89c, type: 2}
 --- !u!1 &833361186
 GameObject:
   m_ObjectHideFlags: 0

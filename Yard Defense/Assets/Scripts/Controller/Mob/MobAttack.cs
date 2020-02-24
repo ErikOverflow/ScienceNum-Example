@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,9 +11,21 @@ namespace YardDefense.Mob
         [SerializeField] MobInfo mobInfo;
         float timer;
 
-        private void Awake()
+        private void OnEnable()
         {
             timer = 0f;
+            EventManager.Instance.OnMobDied += DisableAttacking;
+        }
+
+        private void OnDisable()
+        {
+            EventManager.Instance.OnMobDied -= DisableAttacking;
+        }
+
+        private void DisableAttacking(MobInfo _mobInfo)
+        {
+            if (mobInfo == _mobInfo)
+                this.enabled = false;
         }
 
         private void Update()

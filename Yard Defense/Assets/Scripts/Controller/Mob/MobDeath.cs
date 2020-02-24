@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,16 +8,19 @@ namespace YardDefense.Mob
 {
     public class MobDeath : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
+        [SerializeField] MobInfo mobInfo;
 
+        private void Awake()
+        {
+            EventManager.Instance.OnMobHealthChanged += CheckForDeath;
         }
 
-        // Update is called once per frame
-        void Update()
+        private void CheckForDeath()
         {
-
+            if(mobInfo.CurrentHealth <= 0)
+            {
+                EventManager.Instance.MobDied(mobInfo);
+            }
         }
     }
 }
