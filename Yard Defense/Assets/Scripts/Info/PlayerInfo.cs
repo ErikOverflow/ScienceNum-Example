@@ -2,17 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInfo : MonoBehaviour
+namespace YardDefense.Player
 {
-    [SerializeField] int health = 100;
-    [SerializeField] int attackDamage = 1;
-    [SerializeField] float attackFrequency = 0.5f; //Seconds between attacks
-    
-    public int AttackDamage { get => attackDamage; }
-    public int Health { get => health; }
-
-    public void ChangeHealth(int newHealth)
+    public class PlayerInfo : MonoBehaviour
     {
-        Health = newHealth;
+        [SerializeField] int currentHealth = 100;
+        [SerializeField] int maxHealth = 100;
+        [SerializeField] int attackDamage = 1;
+        [SerializeField] float attackFrequency = 0.5f; //Seconds between attacks
+
+        public int AttackDamage { get => attackDamage; }
+        public int CurrentHealth { get => currentHealth; }
+        public int MaxHealth { get => maxHealth; }
+        public float AttackFrequency { get => attackFrequency; }
+
+        public void ChangeHealth(int newHealth)
+        {
+            currentHealth = newHealth;
+            EventManager.Instance.PlayerHealthChanged();
+        }
     }
 }

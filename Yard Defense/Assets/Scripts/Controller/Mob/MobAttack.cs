@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ErikOverflow
+#pragma warning disable 649
+namespace YardDefense.Mob
 {
     public class MobAttack : MonoBehaviour
     {
@@ -21,7 +22,7 @@ namespace ErikOverflow
             {
                 timer -= mobInfo.AttackFrequency;
                 EventManager.Instance.MobAttack(mobInfo.AttackDamage);
-            }
+            } 
         }
     }
 }

@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ErikOverflow
+#pragma warning disable 649
+namespace YardDefense.Mob
 {
     public class MobHealth : MonoBehaviour
     {
@@ -15,7 +16,7 @@ namespace ErikOverflow
 
         private void TakeDamage(int damageAmount)
         {
-            mobInfo.ChangeHealth(mobInfo.Health - damageAmount);
+            mobInfo.ChangeHealth(mobInfo.CurrentHealth - damageAmount);
         }
     }
 }
