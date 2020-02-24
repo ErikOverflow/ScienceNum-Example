@@ -1109,8 +1109,8 @@ MonoBehaviour:
     baseValue: 100
     eFactor: 0
   attackDamage:
-    baseValue: 1
-    eFactor: 18
+    baseValue: 2.5
+    eFactor: 999
   attackFrequency: 0.5
 --- !u!114 &1470601941
 MonoBehaviour:
