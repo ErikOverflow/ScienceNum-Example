@@ -17,7 +17,7 @@ namespace YardDefense.Mob
 
         private void CheckForDeath()
         {
-            if(mobInfo.CurrentHealth <= 0)
+            if(mobInfo.CurrentHealth.baseValue <= 0)
             {
                 EventManager.Instance.MobDied(mobInfo);
             }

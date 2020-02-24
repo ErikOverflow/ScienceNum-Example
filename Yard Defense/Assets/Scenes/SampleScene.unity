@@ -530,9 +530,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mobName: Mob
-  currentHealth: 10
-  maxHealth: 10
-  attackDamage: 1
+  currentHealth:
+    baseValue: 0
+    eFactor: 0
+  maxHealth:
+    baseValue: 0
+    eFactor: 0
+  attackDamage:
+    baseValue: 0
+    eFactor: 0
   attackFrequency: 1
 --- !u!114 &545168427
 MonoBehaviour:
@@ -1096,9 +1102,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a22b734bcad977479630904b165ee44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 100
-  maxHealth: 100
-  attackDamage: 1
+  currentHealth:
+    baseValue: 100
+    eFactor: 0
+  maxHealth:
+    baseValue: 100
+    eFactor: 0
+  attackDamage:
+    baseValue: 1
+    eFactor: 18
   attackFrequency: 0.5
 --- !u!114 &1470601941
 MonoBehaviour:

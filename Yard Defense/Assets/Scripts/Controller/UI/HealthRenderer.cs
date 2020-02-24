@@ -33,15 +33,15 @@ namespace YardDefense.UI
         private void UpdatePlayerHealth()
         {
             playerHPSlider.minValue = 0;
-            playerHPSlider.maxValue = playerInfo.MaxHealth;
-            playerHPSlider.value = playerInfo.CurrentHealth;
+            playerHPSlider.maxValue = 1;
+            playerHPSlider.value = (playerInfo.CurrentHealth / playerInfo.MaxHealth).Conversion();
         }
 
         private void UpdateMobHealth()
         {
             mobHPSlider.minValue = 0;
-            mobHPSlider.maxValue = mobInfo.MaxHealth;
-            mobHPSlider.value = mobInfo.CurrentHealth;
+            mobHPSlider.maxValue = 1;
+            mobHPSlider.value = (mobInfo.CurrentHealth / mobInfo.MaxHealth).Conversion();
         }
     }
 }

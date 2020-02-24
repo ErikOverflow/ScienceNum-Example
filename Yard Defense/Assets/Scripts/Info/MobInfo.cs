@@ -8,21 +8,21 @@ namespace YardDefense.Mob
     public class MobInfo : MonoBehaviour
     {
         [SerializeField] string mobName = "Mob";
-        [SerializeField] int currentHealth = 10;
-        [SerializeField] int maxHealth = 10;
-        [SerializeField] int attackDamage = 1;
+        [SerializeField] ScienceNum currentHealth;
+        [SerializeField] ScienceNum maxHealth;
+        [SerializeField] ScienceNum attackDamage;
         [SerializeField] float attackFrequency = 1f; //seconds between attacks
 
-        public int CurrentHealth { get => currentHealth; }
+        public ScienceNum CurrentHealth { get => currentHealth; }
         public float AttackFrequency { get => attackFrequency; }
-        public int AttackDamage { get => attackDamage; }
-        public int MaxHealth { get => maxHealth; }
+        public ScienceNum AttackDamage { get => attackDamage; }
+        public ScienceNum MaxHealth { get => maxHealth; }
         public string MobName { get => mobName; }
 
         public void Initialize(
-            string _name, 
-            int _maxHealth, 
-            int _attackDamage, 
+            string _name,
+            ScienceNum _maxHealth,
+            ScienceNum _attackDamage, 
             float _attackFrequency
             )
         {
@@ -33,7 +33,7 @@ namespace YardDefense.Mob
             ChangeHealth(maxHealth);
         }
 
-        public void ChangeHealth(int newHealth)
+        public void ChangeHealth(ScienceNum newHealth)
         {
             currentHealth = newHealth;
             EventManager.Instance.MobHealthChanged();

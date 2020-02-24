@@ -20,8 +20,8 @@ namespace YardDefense
         /// Player specific scripts
         /// </summary>
 
-        public event Action<int> OnPlayerAttack;
-        public void PlayerAttack(int damage)
+        public event Action<ScienceNum> OnPlayerAttack;
+        public void PlayerAttack(ScienceNum damage)
         {
             OnPlayerAttack?.Invoke(damage);
         }
@@ -36,8 +36,8 @@ namespace YardDefense
         /// Mob specific scripts
         /// </summary>
 
-        public event Action<int> OnMobAttack;
-        public void MobAttack(int damage)
+        public event Action<ScienceNum> OnMobAttack;
+        public void MobAttack(ScienceNum damage)
         {
             OnMobAttack?.Invoke(damage);
         }

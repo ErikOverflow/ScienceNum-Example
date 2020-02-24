@@ -13,7 +13,7 @@ namespace YardDefense.Player
             EventManager.Instance.OnMobAttack += TakeDamage;
         }
 
-        private void TakeDamage(int damageAmount)
+        private void TakeDamage(ScienceNum damageAmount)
         {
             playerInfo.ChangeHealth(playerInfo.CurrentHealth - damageAmount);
         }

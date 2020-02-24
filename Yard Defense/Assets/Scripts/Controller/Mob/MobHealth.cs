@@ -30,7 +30,7 @@ namespace YardDefense.Mob
             }
         }
 
-        private void TakeDamage(int damageAmount)
+        private void TakeDamage(ScienceNum damageAmount)
         {
             mobInfo.ChangeHealth(mobInfo.CurrentHealth - damageAmount);
         }

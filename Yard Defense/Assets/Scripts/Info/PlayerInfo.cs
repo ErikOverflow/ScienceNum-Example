@@ -6,17 +6,17 @@ namespace YardDefense.Player
 {
     public class PlayerInfo : MonoBehaviour
     {
-        [SerializeField] int currentHealth = 100;
-        [SerializeField] int maxHealth = 100;
-        [SerializeField] int attackDamage = 1;
+        [SerializeField] ScienceNum currentHealth;
+        [SerializeField] ScienceNum maxHealth;
+        [SerializeField] ScienceNum attackDamage;
         [SerializeField] float attackFrequency = 0.5f; //Seconds between attacks
 
-        public int AttackDamage { get => attackDamage; }
-        public int CurrentHealth { get => currentHealth; }
-        public int MaxHealth { get => maxHealth; }
+        public ScienceNum AttackDamage { get => attackDamage; }
+        public ScienceNum CurrentHealth { get => currentHealth; }
+        public ScienceNum MaxHealth { get => maxHealth; }
         public float AttackFrequency { get => attackFrequency; }
 
-        public void ChangeHealth(int newHealth)
+        public void ChangeHealth(ScienceNum newHealth)
         {
             currentHealth = newHealth;
             EventManager.Instance.PlayerHealthChanged();
